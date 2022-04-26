@@ -39,6 +39,20 @@ int addItemEnd(int item, Node* head){
 
     return 0;
 }
+int removeFirstItem(Node** head){
+    int value;
+    Node *newHead;
+    if(*head == NULL){
+        return -sizeof(int);
+    }
+
+    newHead = (*head)->next;
+    value = (*head)->data;
+    free(*head);
+    *head = newHead;
+
+    return value;
+}
 
 int main() {
     Node *head = NULL;
@@ -54,6 +68,8 @@ int main() {
 
     addItemBeginning(3,&head);
     addItemEnd(5, head);
+    printList(head);
+    removeFirstItem(&head);
     printList(head);
     return 0;
 }
