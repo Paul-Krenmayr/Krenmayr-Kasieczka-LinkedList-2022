@@ -53,6 +53,24 @@ int removeFirstItem(Node** head){
 
     return value;
 }
+int removeLastItem(Node *head){
+    int value;
+    Node *last;
+    Node *secondLast;
+    if(head->next == NULL){
+        value = head ->data;
+        free(head);
+        return value;
+    }
+    while (last->next != NULL){
+        secondLast =last;
+        last = last->next;
+    }
+    value = last->data;
+    secondLast->next = NULL;
+    free(last);
+    return value;
+}
 
 int main() {
     Node *head = NULL;
