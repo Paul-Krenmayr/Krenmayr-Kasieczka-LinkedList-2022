@@ -16,7 +16,7 @@ void printList(Node* head){
     }
 }
 
-void addItem(int item,Node* head){
+void addItemEnd(int item, Node* head){
     Node *current = head;
     /*Getting to the last item*/
     while (current != NULL) {
@@ -42,7 +42,7 @@ int main() {
     head->data = 1;
     head->next = NULL;
 
-    addItem(5,head);
+    addItemEnd(5, head);
     printList(head);
     return 0;
 }
