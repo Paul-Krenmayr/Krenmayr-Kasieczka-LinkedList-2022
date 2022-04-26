@@ -76,22 +76,26 @@ int removeLastItem(Node *head){
     return value;
 }
 int removeByIndex(Node** head, int index){
-    int value;
+    int value = sizeof(int);
     Node* current = *head;
     Node* temp;
-    index = index-1;
+
+    /*Return das Erste Item */
     if (index == 0){
         return removeFirstItem(head);
     }
+    /*Geht zu der Stelle vor der richtigne Stelle in der Liste*/
     for (int i = 0; i < index-1; ++i) {
         if(current->next == NULL){
             return sizeof(int);
         }
         current = current->next;
     }
+
     if (current->next == NULL){
         return sizeof(int);
     }
+    /*Kürzt die Liste an der Richtigen stelle*/
     temp = current->next;
     value = temp->data;
     current->next = temp->next;
