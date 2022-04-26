@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 
-/**/
+/*The new Node DataType*/
 typedef struct node {
     int data;
     struct node * next;
@@ -11,7 +11,7 @@ void printList(Node* head){
     Node *current = head;
 
     while(current != NULL){
-        printf("%d",current->data);
+        printf("%d\n",current->data);
         current = current->next;
     }
 }
@@ -22,13 +22,13 @@ void addItemBeginning(int item,Node** head){
     newHead->data = item;
     newHead->next = *head;
     *head = newHead;
-
 }
 
 int addItemEnd(int item, Node* head){
     Node *current = head;
+
     /*Getting to the last item*/
-    while (current != NULL) {
+    while (current->next != NULL) {
         current = current->next;
     }
 
@@ -57,6 +57,3 @@ int main() {
     printList(head);
     return 0;
 }
-
-
-
