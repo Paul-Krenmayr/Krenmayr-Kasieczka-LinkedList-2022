@@ -15,8 +15,17 @@ void printList(Node* head){
         current = current->next;
     }
 }
+void addItemBeginning(int item,Node** head){
+    Node* newHead;
+    newHead = (Node *) malloc(sizeof (Node));
 
-void addItemEnd(int item, Node* head){
+    newHead->data = item;
+    newHead->next = *head;
+    *head = newHead;
+
+}
+
+int addItemEnd(int item, Node* head){
     Node *current = head;
     /*Getting to the last item*/
     while (current != NULL) {
@@ -25,9 +34,13 @@ void addItemEnd(int item, Node* head){
 
     /*Adding New Item*/
     current->next = (Node *) malloc(sizeof(Node));
+    if(current->next = NULL){
+        return 1;
+    }
     current->next->data = item;
     current->next->next = NULL;
 
+    return 0;
 }
 
 int main() {
@@ -42,6 +55,7 @@ int main() {
     head->data = 1;
     head->next = NULL;
 
+    addItemBeginning(3,&head);
     addItemEnd(5, head);
     printList(head);
     return 0;
