@@ -68,7 +68,7 @@ int removeLastItem(Node *head){
         secondLast = secondLast->next;
     }
 
-    /*Zerstört das letzte Item*/
+    /*Löscht das letzte Item*/
     value = secondLast->next->data;
     free(secondLast->next);
     secondLast->next = NULL;
