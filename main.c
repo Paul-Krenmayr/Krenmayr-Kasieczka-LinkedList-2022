@@ -14,6 +14,7 @@ void printList(Node* head){
         printf("%d\n",current->data);
         current = current->next;
     }
+    printf("finish\n");
 }
 void addItemBeginning(int item,Node** head){
     Node* newHead;
@@ -43,7 +44,7 @@ int removeFirstItem(Node** head){
     int value;
     Node *newHead;
     if(*head == NULL){
-        return -sizeof(int);
+        return sizeof(int);
     }
 
     newHead = (*head)->next;
@@ -55,20 +56,22 @@ int removeFirstItem(Node** head){
 }
 int removeLastItem(Node *head){
     int value;
-    Node *last;
-    Node *secondLast;
+    Node *secondLast = head;
     if(head->next == NULL){
         value = head ->data;
         free(head);
         return value;
     }
-    while (last->next != NULL){
-        secondLast =last;
-        last = last->next;
+    /*Erhält das vorletzte Item*/
+    while (secondLast->next->next != NULL){
+        secondLast = secondLast->next;
     }
-    value = last->data;
+
+    /*Zerstört das letzte Item*/
+    value = secondLast->next->data;
+    free(secondLast->next);
     secondLast->next = NULL;
-    free(last);
+
     return value;
 }
 
@@ -86,8 +89,12 @@ int main() {
 
     addItemBeginning(3,&head);
     addItemEnd(5, head);
+    addItemEnd(2,head);
+    addItemEnd(12345,head);
     printList(head);
     removeFirstItem(&head);
+    printList(head);
+    removeLastItem(head);
     printList(head);
     return 0;
 }
