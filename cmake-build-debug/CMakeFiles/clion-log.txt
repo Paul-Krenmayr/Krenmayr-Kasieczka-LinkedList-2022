@@ -1,10 +1,10 @@
-C:\Users\loren\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5080.224\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/loren/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/bin/ninja/win/ninja.exe -G Ninja -S C:\Users\loren\Desktop\Schule\C\Linkt_List\Krenmayr-Kasieczka-LinkedList-2022 -B C:\Users\loren\Desktop\Schule\C\Linkt_List\Krenmayr-Kasieczka-LinkedList-2022\cmake-build-debug
--- The C compiler identification is GNU 8.1.0
+"C:\Users\DI Paul Krenmayr\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5080.224\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\DI Paul Krenmayr\Desktop\Schule\PRPR\Krenmayr-Kasieczka-LinkedList-2022" -B "C:\Users\DI Paul Krenmayr\Desktop\Schule\PRPR\Krenmayr-Kasieczka-LinkedList-2022\cmake-build-debug"
+-- The C compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe - skipped
+-- Check for working C compiler: C:/Users/DI Paul Krenmayr/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/loren/Desktop/Schule/C/Linkt_List/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug
+-- Build files have been written to: C:/Users/DI Paul Krenmayr/Desktop/Schule/PRPR/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug
