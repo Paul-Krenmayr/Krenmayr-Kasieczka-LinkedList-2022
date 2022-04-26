@@ -34,9 +34,6 @@ int addItemEnd(int item, Node* head){
 
     /*Adding New Item*/
     current->next = (Node *) malloc(sizeof(Node));
-    if(current->next = NULL){
-        return 1;
-    }
     current->next->data = item;
     current->next->next = NULL;
 
