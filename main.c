@@ -54,6 +54,7 @@ int removeFirstItem(Node** head){
 
     return value;
 }
+
 int removeLastItem(Node *head){
     int value;
     Node *secondLast = head;
@@ -74,6 +75,30 @@ int removeLastItem(Node *head){
 
     return value;
 }
+int removeByIndex(Node** head, int index){
+    int value;
+    Node* current = *head;
+    Node* temp;
+    index = index-1;
+    if (index == 0){
+        return removeFirstItem(head);
+    }
+    for (int i = 0; i < index-1; ++i) {
+        if(current->next == NULL){
+            return sizeof(int);
+        }
+        current = current->next;
+    }
+    if (current->next == NULL){
+        return sizeof(int);
+    }
+    temp = current->next;
+    value = temp->data;
+    current->next = temp->next;
+    free(temp);
+
+    return value;
+}
 
 int main() {
     Node *head = NULL;
@@ -89,12 +114,14 @@ int main() {
 
     addItemBeginning(3,&head);
     addItemEnd(5, head);
-    addItemEnd(2,head);
     addItemEnd(12345,head);
+    addItemEnd(12,head);
     printList(head);
     removeFirstItem(&head);
     printList(head);
     removeLastItem(head);
+    printList(head);
+    removeByIndex(&head, 3);
     printList(head);
     return 0;
 }
