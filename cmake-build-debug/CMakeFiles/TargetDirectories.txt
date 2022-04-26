@@ -1,3 +1,3 @@
-C:/Users/loren/Desktop/Schule/C/Linkt_List/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/Krenmayr_Kasieczka_LinkedList_2022.dir
-C:/Users/loren/Desktop/Schule/C/Linkt_List/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/loren/Desktop/Schule/C/Linkt_List/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/DI Paul Krenmayr/Desktop/Schule/PRPR/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/Krenmayr_Kasieczka_LinkedList_2022.dir
+C:/Users/DI Paul Krenmayr/Desktop/Schule/PRPR/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/DI Paul Krenmayr/Desktop/Schule/PRPR/Krenmayr-Kasieczka-LinkedList-2022/cmake-build-debug/CMakeFiles/rebuild_cache.dir
