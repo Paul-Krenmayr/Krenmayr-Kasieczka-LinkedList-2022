@@ -79,12 +79,14 @@ int removeByIndex(Node** head, int index){
     int value = sizeof(int);
     Node* current = *head;
     Node* temp;
+    index --;
 
     /*Return das Erste Item */
     if (index == 0){
         return removeFirstItem(head);
     }
-    /*Geht zu der Stelle vor der richtigne Stelle in der Liste*/
+
+    /*Geht zur richtigen Stelle in der Liste*/
     for (int i = 0; i < index-1; ++i) {
         if(current->next == NULL){
             return sizeof(int);
@@ -110,7 +112,7 @@ int main() {
     head = (Node *) malloc(sizeof(Node));
 
     if (head == NULL) {
-        return 1;
+        return sizeof(int);
     }
 
     head->data = 1;
@@ -125,7 +127,7 @@ int main() {
     printList(head);
     removeLastItem(head);
     printList(head);
-    removeByIndex(&head, 3);
+    removeByIndex(&head, 2);
     printList(head);
     return 0;
 }
